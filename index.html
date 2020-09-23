@@ -14,7 +14,7 @@
 	<head>
 		<meta charset="utf-8">
 		 
-		<title>eo4geo template for Reveal JS</title>
+		<title>EO4GEO_GEOF: Understanding the concept of EO time series</title>
 
 		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
 		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
@@ -30,43 +30,37 @@
  
 	</head>
 
-	<body>
-		  
-		<div class="reveal" >
+<div class="reveal" >
 		
 			 <!-- FORMATTING FOR HEADER -->
 			
 					
 				 <div class = "eo4geologo" style="width: 11%;height : 11%" ></div>	
 			
-				 <div class = "partnerlogo" style="width: 15%;height : 11%" ></div>		
-				 <div  class = "presentation_title" style=" text-align: center " >What is Copernicus?</div>	<!--The title of the presentation appears on each slide-->
-				 
+				 <div class = "partnerlogo" style="width: 8%;height : 9%" ></div>		
+				 <div  class = "presentation_title" style=" text-align: center " >Urban Heat Islands - Understanding the concept of EO time series</div>	<!--The title of the presentation appears on each slide-->
 
 			<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) >
 				@prefix dc: <http://purl.org/dc/terms/>.
 				@prefix eo4geo: <http://bok.eo4geo.eu/>.
-				<>  	dc:title "What is Copernicus?";
-					dc:creator "Stefan Lang, University of Salzburg";
-					dc:subject "Copernicus, EO4GEO, WP5, Satellite, Earth Observation";
-					dc:abstract "This is a template slideset for EO4GEO Partners to familiarize with EO4GEO, introducing the idea of Copernicus and its services. Nevertheless, content-generation is not the prime concern of the template. ";
-					dc:tableOfContents "(1) What is EO?; (2) Benefits of Copernicus; (3) Integration of Jupyter Notebooks; 
-						(4) Integration of Youtube Video; (5) Integration of H5P; (6) Copernicus Services; (7) Reference list;";
-					dc:description "Learning outcomes: Understand the Copernicus ecosystem and services; perform simple analysis with Jupyter Notebook; Understand Copernicus Climate Change Service;";
-					dc:contributor "Eva Missoni, Barbara Hofer";
-					dc:created "2020-06-20";
+				<>  	dc:title "Identification of local heat islands to support city planning - Understanding the concept of EO time series";
+					dc:creator "Marijan Grgic, mgrgic@geof.hr, University of Zagreb, Faculty of Geodesy";
+					dc:subject "Copernicus, EO4GEO, WP4, Satellite, Earth Observation";
+					dc:abstract "This is a lesson on monitoring the urban heat islands. This beginner's lesson introduces the student to remote sensing";
+					dc:tableOfContents "What is urban heat island? How to detect it? What are the measuring techniques? Can you sense remotely?";
+					dc:description "Identification of local heat islands to support city planning, Basic RS/EO/GI knowledge. RS for dummies";
+					dc:contributor "";
+					dc:created "2020-09-20";
 					dc:type "InteractiveResource";
 					dc:format "html";
 					dc:language "EN"; 
 					dc:SizeOrDuration "45min"
 					dc:audience "students";
 					dc:educationLevel "EQF 6";
-					dc:source "Existing youtube-video on Copernicus Climate Change Service; existing Jupyter Notebook on "Well switching in Bangladesh"";
-					dc:rightsHolder "Stefan Lang, University of Salzburg";
+					dc:source "";
+					dc:rightsHolder "Marijan Grgic, UniZG";
 					dc:license "CC BY-SA 4.0";
-					dc:relation eo4geo:TA7-5-1;
-					dc:relation eo4geo:TA7-5-2;
-					dc:relation eo4geo:GS3 .	
+					dc:relation eo4geo:IP5-3-1;
 								-->
 
 
@@ -75,12 +69,12 @@
 			
 				<!-- AUTHORS: DEFINE CONTENT ON YOUR FIRST SLIDE --> 
 				<section >
-					<h1>What is Copernicus?</h1>
-					(A demo slide deck using the <em>Reveal.js</em> framework)
+					<h1>Identification of local heat islands to support city planning</h1>
+					<h2>Understanding the concept of EO time series</h2>
+
 				<!-- AUTHORS: PUT YOUR PRESENTER NOTES HERE: -->
 				<aside class="notes">
-					Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
-				</aside>
+				https://www.elsevier.com/books/the-urban-heat-island/mills/978-0-12-815017-7		</aside>
 				</section>
 				
 				
@@ -129,270 +123,1000 @@
 			
 				
 				<!-- AUTHORS: DEFINE SECTIONS WITHIN A SECTION TO GET VERTICAL SLIDES:--> 
-				<section id="EO">
+				<section id="intro">
+					
 					<section > 
-						<h2>Earth observation (EO)</h2> 
-						<p>EO is one out of three main <em>space assets</em>.</p>
-						<!-- AUTHORS: CREATE BULLETED LIST: --> 
+						<h1>What are Urban Heat Islands?</h1> 
 						<ul>
-							<li style="color:#89b3e479;">SatNav</li>
-							<li style="color:#89b3e479;">SatCom</li>
-							<li style="color:#337acc;">SatObs (EO)</li>
-						</ul>
-						<br><img width="600" height="250" data-src="resources\template_WhatCopernicus\3SpaceComponents.png" alt="3SpaceComponents">	
-						
-						<aside class="notes">
-						You can find your presenter notes here (hit »S« on your keyboard).
-						</aside>
-					</section>
-					
-					<section >
-						<h2 style="color:#89b3e479;">Satellite navigation (SatNav)</h2>
-						<p>The European SatNav programme is called <em>Galileo</em>. With EGNOS, the European differential global positioning system, it belongs to the world spanning <em>global navigation satellite systems</em> (GNSS).</p>
-						<br><img width="600" height="200" data-src="resources\template_WhatCopernicus\UseGalileo.jpg" alt="sat1">
-						<small>Galileo-enabled smartphones can be used in many different <a href="https://www.usegalileo.eu/">applications</a>.</small>
-					</section>
-					
-					<section >
-						<h2 style="color:#89b3e479;">Satellite communication (SatCom)</h2>
-						<p>SatCom allows <em>telecommunication</em> all around the globe. Communication satellites receive signals from Earth and retransmit them by a <em>transponder</em>.</p>
-						<br><img width="600" height="300" data-src="resources\template_WhatCopernicus\SatComIntelsat.jpg" alt="sat1"></a>
-						<small>The satellite as a self-contained communications system, the example of <a href="https://www.intelsatgeneral.com/satellite-basics/">IntelSat</a>.</small>
-						
-					</section>
-					
-					<section >
-						<h2 style="color:#337acc;">Earth observation (EO)</h2>
-						<p>Earth observation is the systematic usage of <em>satellite remote sensing</em> technology for continuous or on-demand <em>imaging</em> or <em>measuring</em> the Earth surface </p>
-						<br><a href="#/EO"><img width="500" height="250" data-src="resources\template_WhatCopernicus\ISS_AstroAlex.jpg" alt="sat1"></a>
-						<small>A view from the Cupola, the observation deck of the ISS. Photograph by astronaut <a href="https://twitter.com/astro_alex">A. Geerst</a>.</small>
-						<br>
-						<a href="#/EO"> Back to top </a>
-					</section>
-				</section>
-				
-				<!-- AUTHORS: INCLUDE AN IMAGE IN YOUR SLIDE: --> 
-				<section ><h2> ... a little allegory on the benefit of Copernicus</h2>
-					<br>New EO data, depicted by the database symbol on the left hand side of the seesaw, make Mr/Mrs Copernicus better positioned for their observations. Thus, EO data <em>leverage</em> a better overview and understanding.
-					<br><img width="600" height="300" data-src="resources\template_WhatCopernicus\EOlever.jpg" alt="Copernicus allegory">
-					<br>
-					
-					<!-- AUTHORS: ADD REFERENCES TO YOUR resources,... -->
-					<citation>(St Lang & A Traun, 2015) [set border to zero, set background to transparent, figure to be obtained via JQuery from pic/caption collection]</citation>
-				</section>
-				
-				<!-- AUTHORS:   Option to Jupyter Notebook (Python) AS IFRAME (deriving from the H5P.org site or from a H5P plugin in Moodle, Blackboard, WordPress,...): --> 
-				<section data-background-iframe="https://nbviewer.jupyter.org/github/carljv/Will_it_Python/blob/master/ARM/ch5/arsenic_wells_switching.ipynb">
-				</section>
-				
-				<!-- AUTHORS: 1st Option to INCLUDE H5P CONTENT AS IFRAME (deriving from the H5P.org site or from a H5P plugin in Moodle, Blackboard, WordPress,...): --> 
-				<section data-background-iframe="https://ideaslab.sbg.ac.at/ideaslab/wp-admin/admin-ajax.php?action=h5p_embed&id=5">
-				</section>
-				
-				<!-- AUTHORS: 2nd Option to INCLUDE H5P CONTENT AS IFRAME (deriving from the H5P.org site or from a H5P plugin in Moodle, Blackboard, WordPress,...): -->
-				<section class="scrollable"> 
-					 <iframe src="https://ideaslab.sbg.ac.at/ideaslab/wp-admin/admin-ajax.php?action=h5p_embed&id=5" width="1481" height="1280" frameborder="0" allowfullscreen="allowfullscreen"></iframe></script>
-					</section>
-				<!--AUTHORS: Integration of Jupyter Notebooks from VITO-Platform - user authentification not solved yet -->
-				<!--section class="scrollable"> 
-					 <iframe src="https://notebooks.vgt.vito.be/user/emissoni/lab/tree/PLUS_Test.ipynb" width="1481" height="1280" frameborder="0" allowfullscreen="allowfullscreen"></iframe></script>
-				</section-->	
-					
-					
-				<section >
-					<section>
-						<h2>The Copernicus idea</h2>
-						<p>Copernicus comprises two major  <em>components</em>.</p>
+						<li>a difference in temperature of urban and suburban areas compared to their outlying rural surroundings
 						<ul>
-							<li style="color:#337acc;">Space component</li>
-							<li style="color:#33b5cc;">(Integrated) Ground segment</li>
+						<li>E.g. the annual mean air temperature of a city with one million or more people can be 1 to 3&deg;C warmer than its surroundings,</li>
+						<li>Usually the difference decreases as city size decreases,</li>
+						<li>We can differ <em>surface</em> and <em>atmospheric</em> urban heat islands.</li>
 						</ul>
-						<br><img width="400" height="200" data-src="resources\template_WhatCopernicus\sat1.jpg" alt="sat1">
-
-					</section>
-					
-					<section >
-						<h2 style="color:#337acc;">Space component (satellites)</h2>
-						<p>The Sentinel family is the backbone of the Copernicus EO space asset</p>
-						<!-- AUTHORS: CREATE A TABLE: --> 
-						<table>
-							<thead>
-								<tr>
-									<th><small>Satellite</th>
-									<th><small>Sensor</th>
-									<th><small>Type</small></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Sentinel-1</td>
-									<td>SAR</td>
-									<td>radar</td>
-								</tr>
-								<tr>
-									<td>Sentinel-2</td>
-									<td>MSI</td>
-									<td>optical</td>
-								</tr>
-								<tr>
-									<td>Sentinel-3</td>
-									<td>...</td>
-									<td>...</td>
-								</tr>
-								<tr>
-									<td>Sentinel-5</td>
-									<td>...</td>
-									<td>...</td>
-								</tr>
-							</tbody>
-						</table>
-					</section>
-					<section >
-						<h2 style="color:#33b5cc;">Ground segment</h2>
-						<p>The Copernicus integrated ground segment includes</p>
-						<ul>
-							<li>Receiving stations</li>
-							<li>Satellite data storage systems</li>
-							<li>In-situ observation network</li>
+						</li>
 						</ul>
-						<br>
+						<br><img width="800" height="200" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/uhi1.jpg" alt="sat1">
 					</section>
 
-				</section>
-
-				<section >
-					<h3>beyond space assets and data</h3>
-					<br>The fundamental objective of Copernicus is to support <em>global policies and conventions</em> as well as <em>EU regulations and directives</em> with a defined portfolio of geospatial information services.
-				</section>
-				
-				<section >
-				<!-- AUTHORS: make long content scrollable --> 
 					<section class="scrollable">
-						<h2>Copernicus services</h2>
-						<p>There are six so-called <em>Copernicus [core] services</em> in six major thematic areas.</p>
-						<table><small>
-							<tr>
-							<ul>
-								<li>Land monitoring</li>
-								<li>Ocean monitoring</li>
-								<li>Atmosphere monitoring</li>
-							</ul>	
-							</tr>
-							<tr><ul>
-								<li>Climate change</li>
-								<li>Emergency management</li>
-								<li>Human security</li>
-							</ul></tr>
-							</small>
-						</table>
-						<br><img width="800" height="130" data-src="resources\template_WhatCopernicus\6services.png" alt="six services">
-						
-						<p>There are six so-called <em>Copernicus [core] services</em> in six major thematic areas.</p>
-						<table><small>
-							<tr>
-							<ul>
-								<li>Land monitoring</li>
-								<li>Ocean monitoring</li>
-								<li>Atmosphere monitoring</li>
-							</ul>	
-							</tr>
-							<tr><ul>
-								<li>Climate change</li>
-								<li>Emergency management</li>
-								<li>Human security</li>
-							</ul></tr>
-							</small>
-						</table>
-						<br><img width="800" height="130" data-src="resources\template_WhatCopernicus\6services.png" alt="six services">
-						
-						<p>There are six so-called <em>Copernicus [core] services</em> in six major thematic areas.</p>
-						<table><small>
-							<tr>
-							<ul>
-								<li>Land monitoring</li>
-								<li>Ocean monitoring</li>
-								<li>Atmosphere monitoring</li>
-							</ul>	
-							</tr>
-							<tr><ul>
-								<li>Climate change</li>
-								<li>Emergency management</li>
-								<li>Human security</li>
-							</ul></tr>							
-							</small>
-						</table>
-						<br><img width="800" height="130" data-src="resources\template_WhatCopernicus\6services.png" alt="six services">
-
-					</section>
-						<section>
-						<img width="150" height="60" data-src="resources\template_WhatCopernicus\CLMS_logo.png" alt="six services">
-						<h2 style="color:#33cc80;">Land monitoring (CLMS)</h2>
-						<p>Copernicus is a European system for monitoring the Earth.</p>
-						<img width="800" height="200" data-src="resources\template_WhatCopernicus\CLand.png" alt="six services">
-						<small>The four Copernicus land monitoring <a href="https://land.copernicus.eu">service</a> components</small>
-					</section>
-					<section>
-						<img width="100" height="100" data-src="resources\template_WhatCopernicus\CMEMS_logo.png" alt="six services">
-						<h2 style="color:#33adcc;">Ocean monitoring (CMEMS)</h2>
-						<p>The Copernicus Marine Environment Monitoring Service focuses on the global ocean.</p>
-						<img width="800" height="200" data-src="resources\template_WhatCopernicus\CMarine.png" alt="six services">
-						<small>The Copernicus marine monitoring <a href="http://marine.copernicus.eu/services-portfolio/access-to-products">service</a> portfolio</small>
-					</section>
-					<section>
-						<img width="250" height="80" data-src="resources\template_WhatCopernicus\CAMS_logo.png" alt="six services">
-						<h2 style="color:#33adcc8c;">Atmosphere monitoring (CAMS)</h2>
-						<p>The Copernicus Marine Environment Monitoring Service focuses on the global ocean.</p>
-						<img width="800" height="200" data-src="resources\template_WhatCopernicus\CAtm.png" alt="six services">
-						<small>The Copernicus atmosphere monitoring <a href="https://atmosphere.copernicus.eu/catalogue#/">service</a> portfolio</small>
-					</section>
-					<section>
-						<h2 style="color:#cc4533d3;">Climate change</h2>
-						<p>...</p>
-					</section>
-					<section>
-						<h2 style="color:#caae60b9;">Emergency management</h2>
-						<p>...</p>
 						<br>
-					</section>
-					<section>
-						<h2 style="color:#33adcc49;">Human security</h2>
-						<p>...</p>
-						<br>
-					</section>
-				</section>
+						<h2>Surface vs atmospheric UHI</h2> 
+						<table style="width: 828px; height: 234px;">
+						<tbody>
+						<tr style="height: 33px;">
+						<td style="width: 155px; height: 33px; text-align: center;">
+						<p><strong>Feature</strong></p>
+						</td>
+						<td style="width: 324.333px; height: 33px; text-align: center;">
+						<p><strong>Surface UHI</strong></p>
+						</td>
+						<td style="width: 324.667px; height: 33px; text-align: center;">
+						<p><strong>Atmospheric UHI</strong></p>
+						</td>
+						</tr>
+						<tr style="height: 33px;">
+						<td style="width: 155px; height: 66.6667px; text-align: center;" rowspan="2">
+						<p><strong>Temporal Development</strong></p>
+						</td>
+						<td style="width: 324.333px; height: 33px; text-align: center;">
+						<p>Present at all times of the day and night</p>
+						</td>
+						<td style="width: 324.667px; height: 33px; text-align: center;">
+						<p>May be small or non-existent during the day</p>
+						</td>
+						</tr>
+						<tr style="height: 33.6667px;">
+						<td style="width: 324.333px; height: 33.6667px; text-align: center;">
+						<p>Most intense during the day and in the summer</p>
+						</td>
+						<td style="width: 324.667px; height: 33.6667px; text-align: center;">
+						<p>Most intense at night or predawn and in the winter</p>
+						</td>
+						</tr>
+						<tr style="height: 60px;">
+						<td style="width: 155px; height: 60px; text-align: center;">
+						<p><strong>Peak Intensity (Most intense UHI conditions)</strong></p>
+						</td>
+						<td style="width: 324.333px; height: 60px; text-align: center;">
+						<p>More spatial and temporal variation:<br /> Day: 10 to 15&deg;C<br /> Night: 5 to 10&deg;C</p>
+						</td>
+						<td style="width: 324.667px; height: 60px; text-align: center;">
+						<p>Less variation:<br /> Day: -1 to 3&deg;C<br /> Night: 7 to 12&deg;C</p>
+						</td>
+						</tr>
+						<tr style="height: 60px;">
+						<td style="width: 155px; height: 60px; text-align: center;">
+						<p><strong>Typical Identification Method</strong></p>
+						</td>
+						<td style="width: 324.333px; height: 60px; text-align: center;">
+						<p>Indirect measurement:<br /> Remote sensing</p>
+						</td>
+						<td style="width: 324.667px; height: 60px; text-align: center;">
+						<p>Direct measurement:<br /> Fixed weather stations<br /> Mobile traverses</p>
+						</td>
+						</tr>
+						<tr style="height: 9px;">
+						<td style="width: 155px; height: 9px; text-align: center;">
+						<p><strong>Typical Depiction</strong></p>
+						</td>
+						<td style="width: 324.333px; height: 9px; text-align: center;">
+						<p>Thermal image</p>
+						</td>
+						<td style="width: 324.667px; height: 9px; text-align: center;">
+						<p>Isotherm map</p>
+						<p>Temperature graph</p>
+						</td>
+						</tr>
+						</tbody>
+						</table>
+					</section>					
 
-				<section >
-					<section >
-						<h2>The Copernicus ecosystem</h2>
-						<p>Copernicus engages different <em>actor groups</em>.</p>
+					<section class="scrollable">
+						<br>
+						<h2>Surface UHI</h2>
 						<ul>
-							<li style="color:#bbb7a8;">Data providers</li>
-							<li style="color:#c5b2ca8f;">Service providers</li>
-							<li style="color:#cc5733;">Users and stakeholders</li>
+						<li>On a sunny day &ndash; exposed urban surfaces heated 27 to 50&deg;C more than the air while shaded or moist surfaces (more often in rural areas) remain close to air temperatures
+						<ul>
+						<li>The magnitude of temperature differences of developed and rural areas varies with seasons &ndash; UHI larges during summer (especially when the sky is clear and winds are calm)!</li>
 						</ul>
-						<br><img width="600" height="300" data-src="resources\template_WhatCopernicus\UserUptake.png" alt="User uptake">
-					</section>
-					
+						</li>
+						</ul>
+						<br><img width="700" height="450" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/zurich.jpg" alt="sat1">
+						<p style="text-align: center;">Summer UHI in Zurich</p>
+						<p style="text-align: center;">See video: <a href="https://youtu.be/HNqm0ae6DY4">https://youtu.be/HNqm0ae6DY4</a></p>
+					</section>					
+
 					<section>
-						<h2 style="color:#bbb7a8;">Data providers</h2>
-						<p>Next to the Sentinel satellites there is a series of contributing missions, including commercial providers of very high (spatial) resolution (VHR)  data.</p>
-						<br><img width="600" height="300" data-src="resources\template_WhatCopernicus\SatSubmeter.png" alt="Worldview-2">
-					</section>
-					
-					<section>
-						<h2 style="color:#c5b2ca8f;">Service providers</h2>
-						<p>...</p>
 						<br>
+						<h2>Atmospheric UHI</h2>
+						<ul>
+						<li>Canopy layer urban heat islands exist in the layer of air where people live, from the ground to below the tops of trees and roofs.</li>
+						<li>Boundary layer urban heat islands start from the rooftop and treetop level and extend up to the point where urban landscapes no longer influence the atmosphere. This region typically extends no more than 1.5 km from the surface</li>
+						</ul>
+					</section>	
+					
+					<section class="scrollable">
+						<br>
+						<h2>Surface vs atmospheric temperatures</h2>
+						<br><img width="500" height="350" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/temperatures uhi.gif" alt="sat1">					
+						<p style="text-align: center;">Surface temperatures have an indirect, but significant, influence on air temperatures, especially in the canopy layer, which is closest to the surface. For example, parks and vegetated areas, which typically have cooler surface temperatures, contribute to cooler air temperatures. Dense, built-up areas, on the other hand, typically lead to warmer air temperatures. Because air mixes within the atmosphere, though, the relationship between surface and air temperatures is not constant, and air temperatures typically vary less than surface temperatures across an area</p>
 					</section>
 					
 					<section>
-						<h2 style="color:#cc5733;">Users and stakeholders</h2>
-						<p>...</p>
 						<br>
+						<h2>Why UHI are important?</h2>
+						<p style="text-align: left;">Most impacts (if not all) of the UHI are negative:</p>
+						<ul style="text-align: left;">
+						<li>Increased energy consumption</li>
+						<li>Elevated emissions of air pollutants and greenhouse gases</li>
+						<li>Compromised human health and comfort</li>
+						<li>Impaired water quality</li>
+						</ul>
+						<p style="text-align: left;">Details on the UHI and&nbsp;the mitigating strategies presented here are defined and shown in:</p>
+						<p style="text-align: left;">Akbari, H., Bell, R., Brazel, T., Cole, D., Estes, M., Heisler, G., ... &amp; Oke, T. (2008). <a href="https://www.epa.gov/sites/production/files/2014-06/documents/basicscompendium.pdf">Reducing Urban Heat Islands: Compendium of Strategies Urban Heat Island Basics.</a> Environmental Protection Agency: Washington, DC, USA, 1-22.</p>
+					</section>						
+					
+				</section>
+
+
+				<section id="Remote sensing">
+					
+					<section>
+						<h1>Remote sensing</h1> 
+						<ul>
+						<li>the acquisition of information about an object or phenomenon without making physical contact</li>
+						<li>used in numerous fields, including geography, land surveying and most Earth science disciplines (for example, hydrology,&nbsp;ecology, meteorology, oceanography, glaciology, geology); it also has military, intelligence, commercial, economic, planning, and humanitarian applications.</li>
+						<li>repeating satellite orbits enable continuous monitoring of the object, phenomenon or area in general, i.e. gathering <span style="background-color: #ff0000;">EO time series</span></li>
+						</ul>
+					</section>	
+
+					<section class="scrollable">
+						<br>
+						<h2>EO time series</h2>
+						<ul>
+						<li>The same phenomenon given in different time, example in gGIF image</li>
+						<li>For the analyis of the time series we need images from different epoch &ndash; often some preprocessing is needed due to:
+						<ul>
+						<li>Different image resolution</li>
+						<li>Different sensor</li>
+						<li>Different angle</li>
+						<li>Different coordinate system</li>
+						<li>Different color/signal interpretation</li>
+						</ul>
+						</li>
+						</ul>
+						<img width="600" height="450" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/timelapse.gif" alt="sat1">					
+					</section>					
+
+					<section>
+						<br>
+						<h2>EO time series</h2>
+						<ul>
+						<li>Efficiently provides information on
+						<ul>
+						<li>Land cover change</li>
+						<li>Vertical and horizontal land movements</li>
+						<li>Sea level change</li>
+						<li>Ice sheet balance change</li>
+						<li>Temperature change over the season or different time</li>
+						<li>Specific events such as fires, floods, landslides, earthquakes, etc.</li>
+						<li>Enable global and local analysis (such as detecting and monitoring Urban Heat Islands, UHIs)</li>
+						</ul>
+						</li>
+						</ul>
 					</section>
 				</section>
+				
+				<section id="UhiAhiHi">
+					
+					<section>
+						<br>
+						<h1>EO time series for UHI monitoring</h1>
+						<table style="height: 369px;" width="847">
+						<tbody>
+						<tr>
+						<td style="width: 415.333px;">
+						<ul>
+						<li>Satellite sensors can observe surface temperature using thermal sensors</li>
+						<li>Sensors available at different satellites</li>
+						</ul>
+						</td>
+						<td style="width: 415.333px;"><img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/thermalsensor.png" alt="" width="400" height="384" /></td>
+						</tr>
+						</tbody>
+						</table>						
+					</section>	
+
+					<section>
+						<br>
+						<h2>EO time series for UHI monitoring</h2>
+						<ul>
+						<li>Different sensing instruments
+						<ul>
+						<li><a href="https://www.satimagingcorp.com/satellite-sensors/other-satellite-sensors/aster/">ASTER</a>
+						<ul>
+						<li>Advanced Spaceborne Thermal Emission and Reflection Radiometer</li>
+						<li>Imaging device on the TERRA satellite</li>
+						</ul>
+						</li>
+						<li><a href="https://landsat.gsfc.nasa.gov/the-enhanced-thematic-mapper-plus/">ETM+</a>
+						<ul>
+						<li>Enhanced Thematic Mapper</li>
+						<li>Sensor platform on the LANDSAT satellite</li>
+						</ul>
+						</li>
+						<li><a href="https://earth.esa.int/web/guest/missions/esa-eo-missions/sentinel-3/news/-/article/sentinel-3a-takes-earth-s-temperature">ESA </a><a href="https://earth.esa.int/web/guest/missions/esa-eo-missions/sentinel-3/news/-/article/sentinel-3a-takes-earth-s-temperature">Copernicus</a><a href="https://earth.esa.int/web/guest/missions/esa-eo-missions/sentinel-3/news/-/article/sentinel-3a-takes-earth-s-temperature"> Sentinel-3A</a> (focus of this presentation)
+						<ul>
+						<li>Carried out by EUMETSAT</li>
+						<li>Toolbox available</li>
+						</ul>
+						</li>
+						</ul>
+						</li>
+						</ul>					
+					</section>	
+
+					<section>
+						<br>
+						<h2>ASTER and LANDSAT</h2>
+						<ul>
+						<li>Thermal infrared band
+						<ul>
+						<li>ASTER
+						<ul>
+						<li>Bands 10-14, 8.125-11.65 &micro;m</li>
+						<li>Spatial resolution 90x90 m</li>
+						</ul>
+						</li>
+						<li>LANDSAT
+						<ul>
+						<li>Band 6, 10.4-12.5 &micro;m</li>
+						<li>Spatial resolution 60x60 m</li>
+						</ul>
+						</li>
+						</ul>
+						</li>
+						</ul>
+						<p>Following slides on ASTER and LANDSAT data and procedures are designed based on the Christopher S Martin&rsquo;s (<a href="mailto:csmartin@buffalo.edu">csmartin@buffalo.edu</a>) presentation: <a href="https://www.slideshare.net/gueste9e085/remote-sensing-the-urban-heat-island-effect">Remote </a><a href="https://www.slideshare.net/gueste9e085/remote-sensing-the-urban-heat-island-effect">Sensing</a> <a href="https://www.slideshare.net/gueste9e085/remote-sensing-the-urban-heat-island-effect">of</a><a href="https://www.slideshare.net/gueste9e085/remote-sensing-the-urban-heat-island-effect"> the Urban </a><a href="https://www.slideshare.net/gueste9e085/remote-sensing-the-urban-heat-island-effect">Heat</a><a href="https://www.slideshare.net/gueste9e085/remote-sensing-the-urban-heat-island-effect"> Island </a><a href="https://www.slideshare.net/gueste9e085/remote-sensing-the-urban-heat-island-effect">Effect</a></p>					
+					</section>	
+
+					<section>
+						<br>
+						<h2>ASTER and LANDSAT</h2>
+						<ul>
+						<li>Procedure (1)
+						<ul>
+						<li>Calibration
+						<ul>
+						<li>L = 0.0370588 &Sigma;DN + 3.2</li>
+						</ul>
+						</li>
+						<li>Convert to BT
+						<ul>
+						<li>BT = K2 / {ln [(k1 / L) + 1]}</li>
+						</ul>
+						</li>
+						<li>Calculate LST (Land Surface Temperature)&nbsp;
+						<ul>
+						<li>Ts = BT / {1 + [(&lambda; * BT / &rho;) * ln &epsilon;]}</li>
+						</ul>
+						</li>
+						</ul>
+						</li>
+						</ul>
+					</section>
+
+					<section>
+						<br>
+						<h2>ASTER and LANDSAT</h2>
+						<ul>
+						<li>Procedure (2)
+						<ul>
+						<li>Separation of sources
+						<ul>
+						<li>Computed LST contains
+						<ul>
+						<li>Radiation</li>
+						<li>Anthropogenic sources</li>
+						</ul>
+						</li>
+						<li>Different methods
+						<ul>
+						<li>E.g. Kato and Yamaguchi (2005)
+						<ul>
+						<li>Rn = G + LE + H vs Rn + A = G + LE + H</li>
+						<li>Estimate the values of each variable
+						<ul>
+						<li>G varies with material</li>
+						<li>H &ndash; total heat flux (final result)</li>
+						</ul>
+						</li>
+						<li>Has = H &ndash; Hn
+						<ul>
+						<li>Hn &ndash; heat from &bdquo;natural causes&rdquo;, i.e. radiant heat flux</li>
+						</ul>
+						</li>
+						</ul>
+						</li>
+						</ul>
+						</li>
+						</ul>
+						</li>
+						</ul>
+						</li>
+						</ul>
+					</section>
+
+					<section>
+						<br>
+						<h2>Vegetation – UHI relationship</h2>
+						<ul>
+						<li>More the vegetation less the UHI effect</li>
+						<li>Methods on quantifying this
+						<ul>
+						<li>NDVI (Normalized Difference Vegetation Index)</li>
+						<li>Vegetation fraction</li>
+						<li>LAI (Leaf Area Index)</li>
+						<li>Other methods
+						<ul>
+						<li>Handheld temperature sensors</li>
+						<li>Aerial temperature measurements</li>
+						</ul>
+						</li>
+						</ul>
+						</li>
+						</ul>
+					</section>
+
+					<section class="scrollable">
+						<br>
+						<h2>Vegetation – UHI relationship</h2>
+						<table style="height: 337px;" width="841">
+						<tbody>
+						<tr>
+						<td style="width: 830px; text-align: center;">
+						<p><strong>NDVI</strong></p>
+						<p>Numerical indicator showing live green vegetation</p>
+						<p>NDVI = (NIR &ndash; RED) / (NIR + RED)</p>
+						</td>
+						</tr>
+						<tr>
+						<td style="width: 830px; text-align: center;">
+						<p><strong>Vegetation fraction</strong></p>
+						<p>Derived from spectral mixture model</p>
+						<p>Uses LSMA to determine vegetation &ndash; at sub-pixel level</p>
+						<p>Sometimes more accurate than NDVI</p>
+						</td>
+						</tr>
+						<tr>
+						<td style="width: 830px; text-align: center;">
+						<p><strong>LAI</strong></p>
+						<p>Can be computed from NDVI</p>
+						<p>Can be derived from field measurements (collection of leaf litterfall or destructive harvesting of leaves within a vertical column passing upward through the entire tree canopy)</p>
+						</td>
+						</tr>
+						</tbody>
+						</table>
+						<p style="text-align: center;">&nbsp;</p>
+						<p style="text-align: center;">&nbsp;</p>
+						<p style="text-align: center;">&nbsp;</p>
+					</section>
+
+				</section>
+
+				<section id="Sentinel3">
+					
+					<section>
+						<h1>UHI detection from Sentinel-3A with the case study</h1> 
+						<ul>
+						<li>Methods and details presented here are taken from RUS (Research and User Support for Sentinel Core products), the service used to promote the uptake of Copernicus data and to support the scaling up of R&amp;D activities with Copernicus data</li>
+						<li>Video webinar on UHI detection available at: <a href="https://youtu.be/5UHghHjP6ZQ">https://youtu.be/5UHghHjP6ZQ</a></li>
+						<li>Details on webinar available at: <a href="https://rus-training.eu/training/urban-heat-island-with-sentinel-3">https://rus-training.eu/training/urban-heat-island-with-sentinel-3</a></li>
+						<li>Some of the figures are screenshotted from the webinar</li>
+						<li>Instead of the following slides, you are advised to take a look at the webinar</li>
+						</ul>
+					</section>	
+
+					<section class="scrollable">
+						<h1>Sentinel-3A</h1> 
+						<ul>
+						<li>The SENTINEL-3 mission is jointly operated by&nbsp;ESA and EUMETSAT&nbsp;to deliver operational ocean and land observation services.</li>
+						<li>The spacecraft carries four main instruments:</li>
+						<li><a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-3/instrument-payload/olci">OLCI</a>: Ocean and Land Colour Instrument</li>
+						<li><a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-3/instrument-payload/slstr">SLSTR</a>: Sea and Land Surface Temperature Instrument</li>
+						<li><a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-3/instrument-payload/altimetry">SRAL</a>: SAR Radar Altimeter</li>
+						<li><a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-3/instrument-payload/altimetry">MWR</a>: Microwave Radiometer.</li>
+						<li>These are complemented by three instruments for Precise Orbit Determination (POD):</li>
+						<li><a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-3/instrument-payload/altimetry">DORIS</a>: a Doppler Orbit Radio positioning system</li>
+						<li><a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-3/instrument-payload/altimetry">GNSS</a>: a GPS receiver, providing precise orbit determination and tracking multiple satellites simultaneously</li>
+						<li><a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-3/instrument-payload/altimetry">LRR</a>: to accurately locate the satellite in orbit using a Laser Retro-Reflector system.</li>
+						</ul>
+						<img width="600" height="450" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/s3.jpg" alt="sat1">					
+					</section>						
+
+					<section class="scrollable">
+						<h1>Sentinel-3A</h1> 
+						<p><iframe src="//www.youtube.com/embed/zL7Ge6BWd98" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></p>
+						<p>If video does not load automatically, please go to <a href="https://youtu.be/zL7Ge6BWd98">https://youtu.be/zL7Ge6BWd98</a></p>
+					</section>					
+					
+					<section class="scrollable">
+						<h1>Sentinel-3</h1> 
+						<p>Sentinel products</p>
+						<table style="width: 578.333px;">
+						<tbody>
+						<tr>
+						<td style="width: 70px; text-align: center;">
+						<p><strong>Name of<br /> Product Package</strong></p>
+						</td>
+						<td style="width: 120px; text-align: center;">
+						<p><strong>Main Content</strong></p>
+						</td>
+						<td style="width: 65px; text-align: center;">
+						<p><strong>Availability</strong></p>
+						</td>
+						<td style="width: 52px; text-align: center;">
+						<p><strong>Latency</strong></p>
+						</td>
+						<td style="width: 64px; text-align: center;">
+						<p><strong>Estimated Size per orbit</strong></p>
+						</td>
+						<td style="width: 165.333px; text-align: center;">
+						<p><strong>Product Dissemination Unit</strong></p>
+						</td>
+						</tr>
+						<tr>
+						<td style="width: 70px; text-align: center;">
+						<p>SL_0_SLT</p>
+						</td>
+						<td style="width: 120px; text-align: center;">
+						<p>Full resolution ISPs</p>
+						</td>
+						<td style="width: 65px; text-align: center;">
+						<p>Internal</p>
+						</td>
+						<td style="width: 52px; text-align: center;">
+						<p>NRT</p>
+						</td>
+						<td style="width: 64px; text-align: center;">
+						<p>7.2 GB</p>
+						</td>
+						<td style="width: 165.333px; text-align: center;">
+						<p>N/A</p>
+						</td>
+						</tr>
+						<tr>
+						<td style="width: 70px; text-align: center;">
+						<p>SL_1_RBT</p>
+						</td>
+						<td style="width: 120px; text-align: center;">
+						<p>Brightness temperatures and radiances</p>
+						</td>
+						<td style="width: 65px; text-align: center;">
+						<p>User</p>
+						</td>
+						<td style="width: 52px; text-align: center;">
+						<p>NRT/NTC</p>
+						</td>
+						<td style="width: 64px; text-align: center;">
+						<p>44.5 GB</p>
+						</td>
+						<td style="width: 165.333px; text-align: center;">
+						<p>Frame 3 mn<br /> for both NRT and NTC</p>
+						</td>
+						</tr>
+						<tr>
+						<td style="width: 70px; text-align: center;">
+						<p>SL_2_WCT</p>
+						</td>
+						<td style="width: 120px; text-align: center;">
+						<p>Sea surface temperature<br /> (single and dual view, 2 and 3 channels)</p>
+						</td>
+						<td style="width: 65px; text-align: center;">
+						<p>Internal</p>
+						</td>
+						<td style="width: 52px; text-align: center;">
+						<p>NRT/NTC</p>
+						</td>
+						<td style="width: 64px; text-align: center;">
+						<p>4.1 GB</p>
+						</td>
+						<td style="width: 165.333px; text-align: center;">
+						<p>N/A</p>
+						</td>
+						</tr>
+						<tr>
+						<td style="width: 70px; text-align: center;">
+						<p>SL_2_WST</p>
+						</td>
+						<td style="width: 120px; text-align: center;">
+						<p>Level-2P sea surface temperature (GHRSST-like)</p>
+						</td>
+						<td style="width: 65px; text-align: center;">
+						<p>User</p>
+						</td>
+						<td style="width: 52px; text-align: center;">
+						<p>NRT/NTC</p>
+						</td>
+						<td style="width: 64px; text-align: center;">
+						<p>2.2 GB</p>
+						</td>
+						<td style="width: 165.333px; text-align: center;">
+						<p>NRT = Frame 3 mn<br /> NTC = Full orbit (from pole to pole)</p>
+						</td>
+						</tr>
+						<tr>
+						<td style="width: 70px; text-align: center;">
+						<p>SL_2_LST__</p>
+						</td>
+						<td style="width: 120px; text-align: center;">
+						<p>Land surface temperature parameters</p>
+						</td>
+						<td style="width: 65px; text-align: center;">
+						<p>User</p>
+						</td>
+						<td style="width: 52px; text-align: center;">
+						<p>NRT/NTC</p>
+						</td>
+						<td style="width: 64px; text-align: center;">
+						<p>5 GB</p>
+						</td>
+						<td style="width: 165.333px; text-align: center;">
+						<p>NRT = Frame 3 mn<br /> NTC = Full orbit (from pole to pole)</p>
+						</td>
+						</tr>
+						<tr>
+						<td style="width: 70px; text-align: center;">
+						<p>SL_2_FRP</p>
+						</td>
+						<td style="width: 120px; text-align: center;">
+						<p>Fire radiative power</p>
+						</td>
+						<td style="width: 65px; text-align: center;">
+						<p>User</p>
+						</td>
+						<td style="width: 52px; text-align: center;">
+						<p>NRT/NTC</p>
+						</td>
+						<td style="width: 64px; text-align: center;">
+						<p>4.4 GB (TBC)</p>
+						</td>
+						<td style="width: 165.333px; text-align: center;">
+						<p>NRT = Frame 3 mn (TBC)<br /> NTC = Full orbit (pole to pole) (TBC)</p>
+						</td>
+						</tr>
+						<tr>
+						<td style="width: 70px; text-align: center;">
+						<p>SL_2_AOD</p>
+						</td>
+						<td style="width: 120px; text-align: center;">
+						<p>Aerosol Optical Depth</p>
+						</td>
+						<td style="width: 65px; text-align: center;">
+						<p>User</p>
+						</td>
+						<td style="width: 52px; text-align: center;">
+						<p>NRT</p>
+						</td>
+						<td style="width: 64px; text-align: center;">
+						<p>0.079 GB (TBC)</p>
+						</td>
+						<td style="width: 165.333px; text-align: center;">
+						<p>NRT + Frame 3 min (TBC)<br /> <br /> <em>Note: an AOD NTC product will be generated by the Level-2 synergy processor, exploiting the synergy between OLCI and SLSTR. Details on&nbsp;</em><em><a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-synergy/product-types/level-2-syn">Level-2 SYN page</a></em></p>
+						</td>
+						</tr>
+						</tbody>
+						</table>				
+					</section>
+					
+					<section class="scrollable">
+						<h1>Sentinel-3A SLSTR</h1> 
+						<ul>
+						<li><a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr">SLSTR &ndash; </a><a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr">Sea</a> <a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr">and</a> <a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr">Land</a> <a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr">Surface</a><a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr"> Temperature </a><a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr">Radiometer</a></li>
+						<li>The main characteristics of the SLSTR are:
+						<ul>
+						<li>swath width: dual view scan, 1&nbsp;420 km (nadir) / 750 km (backwards)</li>
+						<li>spatial sampling: 500 m (VIS, SWIR), 1 km (MWIR, TIR)</li>
+						<li>spectrum: nine bands [0.55-12] &micro;m</li>
+						<li>noise equivalent dT: 50 mK (TIR) at 270 K</li>
+						<li>launch mass: 90 kg</li>
+						<li>size: 2.116 m3</li>
+						<li>design lifetime: 7.5 years.</li>
+						</ul>
+						</li>
+						</ul>
+						<img width="600" height="450" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/slstr.png" alt="sat1">											
+					</section>						
+					
+					<section class="scrollable">
+						<h1>Sentinel-3A SLSTR</h1> 
+						<p>The radiometric bands of SLSTR are presented in the table below:</p>
+						<table style="width: 800px; height: 582px;">
+						<tbody>
+						<tr style="height: 70px;">
+						<td style="width: 98px; height: 70px; text-align: center;">
+						<p><strong>Band</strong></p>
+						</td>
+						<td style="width: 118px; height: 70px; text-align: center;">
+						<p><strong>Central Wavelength</strong></p>
+						<p><strong>(nm)</strong></p>
+						</td>
+						<td style="width: 114px; height: 70px; text-align: center;">
+						<p><strong>Bandwidth</strong></p>
+						<p><strong>(nm)</strong></p>
+						</td>
+						<td style="width: 126px; height: 70px; text-align: center;">
+						<p><strong>Function</strong></p>
+						</td>
+						<td style="width: 222px; height: 70px; text-align: center;" colspan="2">
+						<p><strong>Comments</strong></p>
+						</td>
+						<td style="width: 82px; height: 70px; text-align: center;">
+						<p><strong>Resolution (metres)</strong></p>
+						</td>
+						</tr>
+						<tr style="height: 60px;">
+						<td style="width: 98px; height: 60px; text-align: center;">
+						<p><strong>S1</strong></p>
+						</td>
+						<td style="width: 118px; height: 60px; text-align: center;">
+						<p>554.27</p>
+						</td>
+						<td style="width: 114px; height: 60px; text-align: center;">
+						<p>19.26</p>
+						</td>
+						<td style="width: 126px; height: 60px; text-align: center;">
+						<p>Cloud screening, vegetation monitoring, aerosol</p>
+						</td>
+						<td style="width: 102px; height: 166px; text-align: center;" rowspan="3">
+						<p>VNIR</p>
+						</td>
+						<td style="width: 114px; height: 318px; text-align: center;" rowspan="6">
+						<p>Solar Reflectance Bands</p>
+						</td>
+						<td style="width: 82px; height: 318px; text-align: center;" rowspan="6">
+						<p>500</p>
+						</td>
+						</tr>
+						<tr style="height: 46px;">
+						<td style="width: 98px; height: 46px; text-align: center;">
+						<p><strong>S2</strong></p>
+						</td>
+						<td style="width: 118px; height: 46px; text-align: center;">
+						<p>659.47</p>
+						</td>
+						<td style="width: 114px; height: 46px; text-align: center;">
+						<p>19.25</p>
+						</td>
+						<td style="width: 126px; height: 46px; text-align: center;">
+						<p>NDVI, vegetation monitoring, aerosol</p>
+						</td>
+						</tr>
+						<tr style="height: 60px;">
+						<td style="width: 98px; height: 60px; text-align: center;">
+						<p><strong>S3</strong></p>
+						</td>
+						<td style="width: 118px; height: 60px; text-align: center;">
+						<p>868.00</p>
+						</td>
+						<td style="width: 114px; height: 60px; text-align: center;">
+						<p>20.60</p>
+						</td>
+						<td style="width: 126px; height: 60px; text-align: center;">
+						<p>NDVI, cloud flagging,Pixel co-registration</p>
+						</td>
+						</tr>
+						<tr style="height: 46px;">
+						<td style="width: 98px; height: 46px; text-align: center;">
+						<p><strong>S4</strong></p>
+						</td>
+						<td style="width: 118px; height: 46px; text-align: center;">
+						<p>1374.80</p>
+						</td>
+						<td style="width: 114px; height: 46px; text-align: center;">
+						<p>20.80</p>
+						</td>
+						<td style="width: 126px; height: 46px; text-align: center;">
+						<p>Cirrus detection over land</p>
+						</td>
+						<td style="width: 102px; height: 152px; text-align: center;" rowspan="3">
+						<p>SWIR</p>
+						</td>
+						</tr>
+						<tr style="height: 60px;">
+						<td style="width: 98px; height: 60px; text-align: center;">
+						<p><strong>S5</strong></p>
+						</td>
+						<td style="width: 118px; height: 60px; text-align: center;">
+						<p>1613.40</p>
+						</td>
+						<td style="width: 114px; height: 60px; text-align: center;">
+						<p>60.68</p>
+						</td>
+						<td style="width: 126px; height: 60px; text-align: center;">
+						<p>loud clearing, ice, snow,vegetation monitoring</p>
+						</td>
+						</tr>
+						<tr style="height: 46px;">
+						<td style="width: 98px; height: 46px; text-align: center;">
+						<p><strong>S6</strong></p>
+						</td>
+						<td style="width: 118px; height: 46px; text-align: center;">
+						<p>2255.70</p>
+						</td>
+						<td style="width: 114px; height: 46px; text-align: center;">
+						<p>50.15</p>
+						</td>
+						<td style="width: 126px; height: 46px; text-align: center;">
+						<p>Vegetation state and cloud clearing</p>
+						</td>
+						</tr>
+						<tr style="height: 33px;">
+						<td style="width: 98px; height: 33px; text-align: center;">
+						<p><strong>S7</strong></p>
+						</td>
+						<td style="width: 118px; height: 33px; text-align: center;">
+						<p>3742.00</p>
+						</td>
+						<td style="width: 114px; height: 33px; text-align: center;">
+						<p>398.00</p>
+						</td>
+						<td style="width: 126px; height: 33px; text-align: center;">
+						<p>SST, LST, Active fire</p>
+						</td>
+						<td style="width: 222px; height: 99px; text-align: center;" colspan="2" rowspan="3">
+						<p>Thermal IR Ambient bands (200 K -320 K)</p>
+						</td>
+						<td style="width: 82px; height: 164.333px; text-align: center;" rowspan="5">
+						<p>1000</p>
+						</td>
+						</tr>
+						<tr style="height: 33px;">
+						<td style="width: 98px; height: 33px; text-align: center;">
+						<p><strong>S8</strong></p>
+						</td>
+						<td style="width: 118px; height: 33px; text-align: center;">
+						<p>10854.00</p>
+						</td>
+						<td style="width: 114px; height: 33px; text-align: center;">
+						<p>776.00</p>
+						</td>
+						<td style="width: 126px; height: 33px; text-align: center;">
+						<p>SST, LST, Active fire</p>
+						</td>
+						</tr>
+						<tr style="height: 33px;">
+						<td style="width: 98px; height: 33px; text-align: center;">
+						<p><strong>S9</strong></p>
+						</td>
+						<td style="width: 118px; height: 33px; text-align: center;">
+						<p>12022.50</p>
+						</td>
+						<td style="width: 114px; height: 33px; text-align: center;">
+						<p>905.00</p>
+						</td>
+						<td style="width: 126px; height: 33px; text-align: center;">
+						<p>SST, LST</p>
+						</td>
+						</tr>
+						<tr style="height: 32.3333px;">
+						<td style="width: 98px; height: 32.3333px; text-align: center;">
+						<p><strong>F1</strong></p>
+						</td>
+						<td style="width: 118px; height: 32.3333px; text-align: center;">
+						<p>3742.00</p>
+						</td>
+						<td style="width: 114px; height: 32.3333px; text-align: center;">
+						<p>398.00</p>
+						</td>
+						<td style="width: 126px; height: 32.3333px; text-align: center;">
+						<p>Active fire</p>
+						</td>
+						<td style="width: 222px; height: 65.3333px; text-align: center;" colspan="2" rowspan="2">
+						<p>Thermal IR fire emission bands</p>
+						</td>
+						</tr>
+						<tr style="height: 33px;">
+						<td style="width: 98px; height: 33px; text-align: center;">
+						<p><strong>F2</strong></p>
+						</td>
+						<td style="width: 118px; height: 33px; text-align: center;">
+						<p>10854.00</p>
+						</td>
+						<td style="width: 114px; height: 33px; text-align: center;">
+						<p>776.00</p>
+						</td>
+						<td style="width: 126px; height: 33px; text-align: center;">
+						<p>Active fire</p>
+						</td>
+						</tr>
+						</tbody>
+						</table>
+					</section>						
+
+					<section class="scrollable">
+						<h1>Sentinel-3 SLSTR</h1> 
+						<p>Product types</p>
+						<ul>
+						<li>Describes the granularity of SENTINEL-3 SLSTR products distributed to users:&nbsp;<a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr/product-types/level-1b">Level-1B</a>(radiance and brightness temperature),&nbsp;<a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr/product-types/level-2-wst">Level-2 WST</a>(SST following the GHRSST specifications) and&nbsp;<a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr/product-types/level-2-lst">Level-2 LST</a>&nbsp;(Land Surface Temperature). The&nbsp;<a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr/product-types/level-2-wct">Level-2 WCT</a>&nbsp;(Sea Surface Temperature (SST) for single and dual view) is not distributed to the users.<br /> In addition, two new products are under specification. They should be available shortly after the end of the commissioning phase: the&nbsp;<a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr/product-types/level-2-frp-aod">Fire Radiative Power (FRP) and the Global Aerosol Optical Depth (AOD)</a>.</li>
+						</ul>					
+					</section>						
+					
+				</section>
+
+				<section id="CaseStudy">
+					
+					<section>
+						<h1>Sentinel-3 SLSTR - hands on</h1> 
+						<ul>
+						<li>Data access: Copernicus Open Access Hub (registration required and free)</li>
+						</ul>
+						<br><img width="700" height="450" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/coah.png" alt="sat1">											
+					</section>	
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Data acquisition</li>
+						</ul>
+						<br><img width="700" height="450" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/coah2.png" alt="sat1">											
+					</section>						
+					
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Data acquisition (SL_2_LST – level 2 data)</li>
+						</ul>
+						<br><img width="700" height="450" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/coah3.png" alt="sat1">											
+					</section>					
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Data acquisition – data download – each scene up to 2GB</li>
+						</ul>
+						<br><img width="608" height="260" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/dataexample.png" alt="sat1">											
+					</section>					
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Data processing &ndash; <a href="http://step.esa.int/main/toolboxes/snap/">SNAP (Sentinel </a><a href="http://step.esa.int/main/toolboxes/snap/">Application</a> <a href="http://step.esa.int/main/toolboxes/snap/">Platform</a><a href="http://step.esa.int/main/toolboxes/snap/">) </a>software
+						<ul>
+						<li>Published under GPL-3 licence</li>
+						<li>Common architecture for all Toolboxes</li>
+						<li>Very fast image display and navigation even of giga-pixel images</li>
+						<li>Graph Processing Framework (GPF): for creating user-defined processing chains</li>
+						<li>Advanced layer management allows adding and manipulation of new overlays such as images of other bands, images from WMS servers or ESRI shapefiles</li>
+						<li>Rich region-of-interest definitions for statistics and various plots</li>
+						<li>Easy bitmask definition and overlay</li>
+						<li>Flexible band arithmetic using arbitrary mathematical expressions</li>
+						<li>Accurate reprojection and ortho-rectification to common map projections,</li>
+						<li>Geo-coding and rectification using ground control points</li>
+						<li>Automatic SRTM DEM download and tile selection</li>
+						<li>Product library for scanning and cataloguing large archives efficiently</li>
+						<li>Multithreading and Multi-core processor support</li>
+						<li>Integrated WorldWind visualisation</li>
+						</ul>
+						</li>
+						</ul>
+					</section>					
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<p>Data preview (select two downloaded images of the same scene)</p>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP.png" alt="sat1">											
+					</section>					
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<p>Making a subset for both images of the same scene (Raster… Subset… Band subset – NDVI, LST, x_in, y_in, biome, lat, lon)</p>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP2.png" alt="sat1">											
+					</section>						
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Adapting the coordinate projection (Raster&hellip; Geometric Operation&hellip; Reprojection &ndash; select desired)</li>
+						<li>Changing color ramp</li>
+						</ul>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP3.png" alt="sat1">											
+					</section>	
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Changing color ramp &ndash; sensor detection of temperature in one image (&deg;K) &ndash; day scene</li>
+						</ul>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP4.png" alt="sat1">											
+					</section>	
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Changing color ramp &ndash; sensor detection of temperature in one image (&deg;K) &ndash; night scene</li>
+						</ul>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP5.png" alt="sat1">											
+					</section>
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Changing color ramp – temperature day vs night comparison</li>
+						</ul>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP6.png" alt="sat1">											
+					</section>
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Overlapping the night temperature map with land cover map (Add Land Cover Band – automatic process in SNAP)</li>
+						</ul>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP7.png" alt="sat1">											
+					</section>	
+					
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Overlapping the night temperature map with land cover map (Add Land Cover Band – automatic process in SNAP)</li>
+						</ul>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP8.png" alt="sat1">											
+					</section>					
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Within overlapping process select manually some of the pixels with known rural position (e.g. import .shp with points)</li>
+						</ul>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP9.png" alt="sat1">											
+					</section>						
+
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Results</li>
+						</ul>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/SNAP10.png" alt="sat1">											
+					</section>	
+					
+					
+					
+					<section>
+						<h2>Sentinel-3 SLSTR - hands on</h2> 
+						<ul>
+						<li>Results presented in QGIS for London, 2018 (see RUS webinar for a whole procedure) – if processed for different dates – TIME SERIES ANALYSIS</li>
+						</ul>
+						<br><img width="621" height="365" img src="http://eo4geo.sbg.ac.at/GEOF/Understanding-the-concept-of-EO-time-series/QGIS.png" alt="sat1">											
+					</section>	
+					
+				</section>
+
+				
+
+
+				<section id="Conclusions">
+					
+					<section>
+						<h1>Take-aways</h1> 
+						<ul>
+						<li>Time series serve different purposes one of which is monitoring of the UHIs</li>
+						<li>UHI detection and monitoring is routine job that can be performed for local or global purposes</li>
+						<li>Sentinel 3 satellite mission provides data freely available for such purposes</li>
+						<li>On top of that EU and ESA are trying hard to get people use Sentinel data &ndash; beside the data, they provide software and trainings, sometimes even grants to pay off the Copernicus investments</li>
+						</ul>
+					</section>	
+
+					<section>
+						<h1>Thanks!</h1> 
+						<p>Feel free to contact EO4GEO for more!</p>
+					</section>	
+					
+				</section>
+
 				
 				<!-- AUTHORS: CREATE YOUR LIST OF REFERENCES HERE: -->
+				<!--
 				<section> 
 				<h2> Reference list </h2>
 				<br>
@@ -402,6 +1126,7 @@
 				<a href="https://doi.org/10.1080/17538947.2017.1379154">10.1080/17538947.2017.1379154</a>
 				</reference_list>
 				</section>
+				-->
 				
 				
 				<section>Slide show ends</section>
@@ -434,7 +1159,7 @@
 
 		</script>
 		
-		<!-- rauslöschen?? -->
+		<!-- rauslöschen?? --> 
 		<script>Reveal.initialize({
 			simplemenu: {
 				menuselector: '.menu a'
