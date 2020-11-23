@@ -13,4 +13,4 @@ Take-Aways
 Learning Outcomes:
 Design and develop methods for local heat islands detection to support city planning
 Understand basics of RS/EO/GI knowledge
-Identify RS methods for dummies
+Identify different remote sensing methods
